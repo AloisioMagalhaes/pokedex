@@ -1,0 +1,28 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "prettier --write ./README.md ./webpack.config.js ./index.js ./src ./public ./config && rimraf -rf ./dist/**/*",
+    "dev": "webpack --config=./webpack.config.js --mode=development --define-process-env-node-env=development --entry=./index.js  --stats=verbose",
+    "prod": "npm run webpack -- --env mode=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@webpack-cli/info": "^2.0.1",
+    "node-fetch": "^3.3.1",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "core-js": "^3.30.1"
+  }
+}
